@@ -5,6 +5,7 @@
 from commands import CommandReturn
 from listeners import OnPluginLoaded, OnPluginUnloaded
 from menus import PagedMenu, PagedOption
+from plugins.manager import plugin_manager
 
 # Source.Python Admin
 from admin.core.clients import clients
@@ -19,7 +20,7 @@ from admin.core.plugins.strings import PluginStrings
 # >> GLOBAL VARIABLES
 # =============================================================================
 plugin_strings = PluginStrings("admin_map_cycle")
-_map_cycle_plugin = None
+_map_cycle_plugin = plugin_manager.get_plugin_instance('map_cycle')
 
 
 # =============================================================================
